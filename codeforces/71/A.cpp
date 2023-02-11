@@ -1,36 +1,22 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+
 using namespace std;
-#define ll long long
-void fast_IO()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-}
-void file_IO()
-{
-#ifndef ONLINE_JUDGE
-    freopen("Input.txt", "r" , stdin);
-    freopen ("Output.txt", "w", stdout);
-#endif
-}
-int main()
-{
-    fast_IO();
-    file_IO();
 
-    int n;
-    cin >> n;
-    for (int i=0; i < n; i++)
-    {
-        string s;
-        cin >> s;
-        if (s.size()>10)
-        {
-            cout << s[0] << s.size() -2 << s[s.size()-1]<< "\n";
-        }
+int main() {
+  int n;
+  cin >> n;
+  
+  while (n--) {
+    string s;
+    cin >> s;
 
-        else cout << s<< "\n";
+    if (s.length() <= 10) {
+      cout << s << endl;
+    } else {
+      cout << s[0] << s.length() - 2 << s[s.length() - 1] << endl;
     }
+  }
 
-
+  return 0;
 }
