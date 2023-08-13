@@ -1,31 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-#define ll long long
-void fast_IO()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-}
-void file_IO()
-{
-#ifndef ONLINE_JUDGE
-    freopen("Input.txt", "r" , stdin);
-    freopen ("Output.txt", "w", stdout);
-#endif
-}
 int main()
 {
-    fast_IO();
-    file_IO();
-
-    set <char> ans;
-    string result;
-    getline(cin,result) ;
-    for (char i : result)
+    string str;
+    int c = 0;
+    getline(cin, str);
+    sort(str.begin(), str.end());
+    for (int i = 0; i < str.size(); i++)
     {
-        if (i=='{' || i== '}' || i==',' || i==' ') continue;
-        ans.insert(i);
-    }
-    cout << ans.size();
+        if (str[i] != '{' && str[i] != ',' && str[i] != ' ' && str[i] != '}')
+        {
+            if (str[i] != str[i + 1]) //{a, a, b, b}
 
+                c++;
+        }
+    }
+    cout << c;
 }
