@@ -1,40 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define azmy ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
-#define new "\n";
 #define ll long long
-void input()
+void fast_IO()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+}
+void file_IO()
 {
 #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
+    freopen("Input.txt", "r" , stdin);
+    freopen ("Output.txt", "w", stdout);
 #endif
 }
 int main()
 {
-    azmy
-    input();
-    ll size;
-    cin >> size;
-    string s;
-    cin >> s;
-    if (s.size() < 26)
+    fast_IO();
+    file_IO();
+
+    int n;
+    cin >> n;
+    string ch;
+    cin >> ch;
+    set<char> st;
+    for (int i=0; i < n; i++)
     {
-        cout << "NO" << new;
-        return 0;
-    }
-    set<char> ss;
-    for (int i = 0; i < s.size(); i++)
-    {
-        ss.insert(toupper(s[i]));
+        st.insert(tolower(ch[i]));
     }
 
-    if (ss.size() >= 26)
-    {
-        cout << "YES" << new;
-    }
+    if (st.size()<26)
+    {cout << "No"; return 0;}
 
-    else
-    {
-        cout << "NO" << new;
-    }
+    cout << "Yes";
+
 }
