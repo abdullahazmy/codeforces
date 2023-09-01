@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -6,43 +8,40 @@ int main()
 {
     int n, m;
     cin >> n;
-    vector<int> x(n);
+    vector<int> boysSkills(n);
 
     for (int i = 0; i < n; ++i)
     {
-        cin >> x[i];
+        cin >> boysSkills[i];
     }
 
     cin >> m;
-    vector<int> y(m);
+    vector<int> girlsSkills(m);
 
     for (int i = 0; i < m; ++i)
     {
-        cin >> y[i];
+        cin >> girlsSkills[i];
     }
 
-    sort(x.begin(), x.end());
-    sort(y.begin(), y.end());
+    // Sort the skills of boys and girls in non-decreasing order.
+    sort(boysSkills.begin(), boysSkills.end());
+    sort(girlsSkills.begin(), girlsSkills.end());
 
     int pairs = 0;
-    int start = 0;
-    int end = 0;
+    vector<bool> pairedGirl(m, false);
 
-    while (start < n && end < m)
+    // Iterate through each boy and try to find a suitable girl.
+    for (int i = 0; i < n; ++i)
     {
-        if (abs(x[start] - y[end]) <= 1)
+        for (int j = 0; j < m; ++j)
         {
-            start++;
-            end++;
-            pairs++;
-        }
-        else if (x[start] < y[end])
-        {
-            start++;
-        }
-        else
-        {
-            end++;
+            if (!pairedGirl[j] && abs(boysSkills[i] - girlsSkills[j]) <= 1)
+            {
+                // If a suitable girl is found, mark her as paired and break.
+                pairedGirl[j] = true;
+                pairs++;
+                break;
+            }
         }
     }
 
