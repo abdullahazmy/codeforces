@@ -1,4 +1,21 @@
 {
+  "CF231399216": {
+    "contest_id": 50,
+    "language": "GNU C++17",
+    "path": "codeforces/50/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Domino piling",
+    "problem_url": "https://codeforces.com/contest/50/problem/A",
+    "submission_id": "CF231399216",
+    "submission_url": "https://codeforces.com/contest/50/submission/231399216",
+    "tags": [
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Nov/05/2023 01:38"
+  },
   "CF231399326": {
     "contest_id": 281,
     "language": "GNU C++17",
