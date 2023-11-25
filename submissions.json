@@ -1,0 +1,18 @@
+{
+  "CF234333345": {
+    "contest_id": 26,
+    "language": "GNU C++17",
+    "path": "codeforces/26/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Almost Prime",
+    "problem_url": "https://codeforces.com/contest/26/problem/A",
+    "submission_id": "CF234333345",
+    "submission_url": "https://codeforces.com/contest/26/submission/234333345",
+    "tags": [
+      "number theory",
+      "*900"
+    ],
+    "timestamp": "Nov/25/2023 23:39"
+  }
+}
