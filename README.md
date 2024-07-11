@@ -5,7 +5,7 @@ Submissions
 ## Introduction
 
 A repository to keep track of problem solving practice, containing solutions from platforms:
-* My Codeforces [![Codeforces](https://run.kaist.ac.kr/badges/codeforces/abdullah_azmy.svg)](https://codeforces.com/profile/abdullah_azmy) Account
+* My Codeforces [Codeforces](https://run.kaist.ac.kr/badges/codeforces/abdullah_azmy.svg)](https://codeforces.com/profile/abdullah_azmy) Account
 
 
 ## Contents
